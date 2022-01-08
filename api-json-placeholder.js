@@ -85,15 +85,31 @@ function listarImagenes(){
 }
 
 
-listarComentarios()
-listarImagenes()
-listarUsuarios()
+
+
+
 
 let btnUsuarios = document.getElementById('btnUsuarios')
 btnUsuarios.addEventListener('click', function(e){
 	let prueba = document.getElementById('listado-usuarios')
 	prueba.classList.toggle("d-none")
+	listarUsuarios()
+	
+})
 
+let btnComentarios = document.getElementById('btnComentarios')
+btnComentarios.addEventListener('click', function(e){
+	let prueba = document.getElementById('listado-comentarios')
+	prueba.classList.toggle("d-none")
+	listarComentarios()
+	
+})
+
+let btnGaleria = document.getElementById('btnGaleria')
+btnGaleria.addEventListener('click', function(e){
+	let prueba = document.getElementById('listado-fotos')
+	prueba.classList.toggle("d-none")
+	listarImagenes()
 	
 })
 	
