@@ -84,8 +84,20 @@ function listarImagenes(){
 	})
 }
 
-listarUsuarios()
+
 listarComentarios()
 listarImagenes()
+listarUsuarios()
+
+let btnUsuarios = document.getElementById('btnUsuarios')
+btnUsuarios.addEventListener('click', function(e){
+	let prueba = document.getElementById('listado-usuarios')
+	prueba.classList.toggle("d-none")
+
+	
+})
+	
+
+
 
 
