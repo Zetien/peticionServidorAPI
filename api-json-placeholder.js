@@ -85,34 +85,46 @@ function listarImagenes(){
 }
 
 
-
-
-
-
 let btnUsuarios = document.getElementById('btnUsuarios')
 btnUsuarios.addEventListener('click', function(e){
-	let prueba = document.getElementById('listado-usuarios')
-	prueba.classList.toggle("d-none")
+	let prueba1 = document.getElementById('listado-usuarios')
+	let prueba2 = document.getElementById('listado-comentarios')
+	let prueba3 = document.getElementById('listado-fotos')
+	prueba1.classList.toggle("d-none")
 	listarUsuarios()
-	
+	if (prueba2.classList.contains("d-none")=== false || prueba3.classList.contains("d-none")=== false) {
+		prueba2.classList.add("d-none")
+		prueba3.classList.add("d-none")
+	}
 })
 
 let btnComentarios = document.getElementById('btnComentarios')
 btnComentarios.addEventListener('click', function(e){
-	let prueba = document.getElementById('listado-comentarios')
-	prueba.classList.toggle("d-none")
+	let prueba2 = document.getElementById('listado-comentarios')
+	let prueba1 = document.getElementById('listado-usuarios')
+	let prueba3 = document.getElementById('listado-fotos')
+	prueba2.classList.toggle("d-none")
 	listarComentarios()
-	
+	if (prueba1.classList.contains("d-none")=== false || prueba3.classList.contains("d-none")=== false) {
+		prueba1.classList.add("d-none")
+		prueba3.classList.add("d-none")
+	}
 })
 
 let btnGaleria = document.getElementById('btnGaleria')
 btnGaleria.addEventListener('click', function(e){
-	let prueba = document.getElementById('listado-fotos')
-	prueba.classList.toggle("d-none")
+	let prueba3 = document.getElementById('listado-fotos')
+	let prueba2 = document.getElementById('listado-comentarios')
+	let prueba1 = document.getElementById('listado-usuarios')
+	prueba3.classList.toggle("d-none")
 	listarImagenes()
-	
+	if (prueba1.classList.contains("d-none")=== false || prueba2.classList.contains("d-none")=== false) {
+		prueba1.classList.add("d-none")
+		prueba2.classList.add("d-none")
+	}
 })
-	
+
+
 
 
 
